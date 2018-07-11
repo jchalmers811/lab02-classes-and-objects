@@ -15,13 +15,19 @@ class Fraction {
     var num: Int //numerator
     var den: Int //demonominator
     
-    //default initialiser
-    init() {
-        self.num = 0 //initialise fraction to zero
-        self.den = 1
+    /**
+        Default initialiser
+     
+        Initialise fraction to zero
+    */
+    convenience init() {
+        self.init(num: 0, den: 1)
     }
     
-    //designated initialiser
+    /**
+        Designated initialiser
+     
+    */
     init(num : Int, den : Int) {
         
         // Check the denominator...
@@ -29,6 +35,14 @@ class Fraction {
         
         self.num = num
         self.den = den
+    }
+    
+    /**
+        Convenience initialiser
+     
+    */
+    convenience init(num : Int) {
+        self.init(num: num, den: 1)
     }
     
 }

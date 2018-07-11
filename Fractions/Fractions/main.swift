@@ -44,3 +44,8 @@ print("u2=\(u2.num)/\(u2.den)")
 var x2: Fraction = Fraction(num: -5,den: 1)
 
 print("x2=\(x2.num)/\(x2.den)")
+
+// Define and create a new instance of a Fraction object
+var x3: Fraction = Fraction(num: -5)
+
+print("x3=\(x3.num)/\(x3.den)")
