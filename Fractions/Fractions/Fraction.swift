@@ -16,6 +16,30 @@ class Fraction {
     var den: Int //demonominator
     
     /**
+     Converts fraction to a Float value
+     
+     - returns: Float Decimal value of the fraction
+     */
+    var decimal: Float {
+        get {
+            // num and den are of type Int, therefore,
+            // they need to be explicitly converted to Floats
+            return Float(self.num)/Float(self.den);
+        }
+    }
+    
+    /**
+     Converts object to a string description
+     
+     - returns: String String representation of a fraction
+     */
+    var description: String {
+        return "\(self.num)/\(self.den)"
+    }
+    
+    
+    
+    /**
         Default initialiser
      
         Initialise fraction to zero
@@ -44,5 +68,7 @@ class Fraction {
     convenience init(num : Int) {
         self.init(num: num, den: 1)
     }
+    
+    
     
 }
