@@ -50,6 +50,7 @@ let z: Int = 2
 f = u.divide(z)
 print("(" + u.description + ")/\(z)=" + f.description)
 
+print("u=\(u.description)")
 
 f = u + 5
 print(f.description)

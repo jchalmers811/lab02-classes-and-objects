@@ -34,8 +34,17 @@ class Fraction {
      - returns: String String representation of a fraction
      */
     var description: String {
+        if self.num == 0 {
+            return "0"
+        } else if self.den == 1 {
+            return "\(self.num)"
+        } else if self.num/self.den > 1 {
+            return "\(self.num/self.den) \(self.num%self.den)/\(self.den)"
+        }
+        
         return "\(self.num)/\(self.den)"
     }
+    
     
     
     
