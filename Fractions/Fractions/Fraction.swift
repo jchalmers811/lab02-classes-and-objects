@@ -12,8 +12,8 @@ import Foundation
 
 class Fraction {
     
-    var num: Int //numerator
-    var den: Int //demonominator
+    private var num: Int;   // Numerator
+    private var den: Int;   // Denominator
     
     /**
      Converts fraction to a Float value
@@ -244,3 +244,33 @@ func *(f1: Fraction, f2: Fraction) -> Fraction {
 func /(f1: Fraction, f2: Fraction) -> Fraction {
     return f1.divide(f2)
 }
+
+/**
+ + operator between two Fractions
+ */
+func +(f: Fraction,  i: Int) -> Fraction {
+    return f.add(Fraction(num: i))
+}
+
+/**
+ - operator between two Fractions
+ */
+func -(f: Fraction, i: Int) -> Fraction {
+    return f.subtract(Fraction(num: i))
+}
+
+/**
+ * operator between two Fractions
+ */
+func *(f: Fraction, i: Int) -> Fraction {
+    return f.multiply(Fraction(num: i))
+}
+
+/**
+ / operator between two Fractions
+ */
+
+func /(f: Fraction, i: Int) -> Fraction {
+    return f.divide(Fraction(num: i))
+}
+

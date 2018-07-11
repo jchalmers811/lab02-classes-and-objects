@@ -49,3 +49,16 @@ print("(" + u.description + ")+3=" + f.description)
 let z: Int = 2
 f = u.divide(z)
 print("(" + u.description + ")/\(z)=" + f.description)
+
+
+f = u + 5
+print(f.description)
+
+f = u - 5
+print(f.description)
+
+f = u * 5
+print(f.description)
+
+f = u / 5
+print(f.description)
