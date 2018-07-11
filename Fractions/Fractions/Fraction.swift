@@ -59,6 +59,8 @@ class Fraction {
         
         self.num = num
         self.den = den
+        
+        self.reduce()
     }
     
     /**
@@ -213,6 +215,36 @@ class Fraction {
     func divide(_ x: Int) -> Fraction {
         return Fraction(num: self.num, den: self.den*x)
     }
+    
+    /**
+     Reduce self by greatest common denominator found.
+     */
+    private func reduce() {
+        if(den < 0) {
+            // If the denominator is negative
+            // multiply the numerator and
+            // denominator by -1 - this
+            // ensures the denominator is
+            // always positive, and numerator
+            // carries the appropriate sign
+            num = -num
+            den = -den
+        }
+        
+        // Find greatest common denominator
+        for gcd in (1...den).reversed() {
+            if(num%gcd == 0 && den%gcd==0) {
+                // Common denominator found,
+                // divide numerator and denominator
+                num /= gcd
+                den /= gcd
+                break
+            }
+        }
+    } 
+    
+    
+    
     
 }
 
